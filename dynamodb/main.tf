@@ -33,10 +33,6 @@ resource "aws_iam_policy" "dynamodb_policy" {
   name = "dynamodb_policy"
   policy = <<EOF
 {
-resource "aws_iam_policy" "dynamodb_policy" {
-  name = "dynamodb_policy"
-  policy = <<EOF
-{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -108,6 +104,5 @@ terraform {
     table_name = "terraform_state"
     region = "us-west-2"
     lock = true
-    lock_table = "terraform_state_lock"
   }
 }
